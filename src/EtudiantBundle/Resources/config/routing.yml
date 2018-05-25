@@ -1,0 +1,45 @@
+etudiant_accueil:
+    path:     /
+    defaults: { _controller: EtudiantBundle:Etudiant:accueil }
+etudiant_ajouter:
+    path:     /etudiant/ajouter
+    defaults: { _controller: EtudiantBundle:Etudiant:ajouter }
+etudiant_modifier:
+    path:     /etudiant/modifier
+    defaults: { _controller: EtudiantBundle:Etudiant:modifier }
+etudiant_lister:
+    path:     /etudiant/lister
+    defaults: { _controller: EtudiantBundle:Etudiant:lister }
+etudiant_rechercher:
+    path:     /etudiant/rechercher
+    defaults: { _controller: EtudiantBundle:Etudiant:rechercher }
+etudiant_consulter:
+    path:     /etudiant/consulter/{id}
+    defaults: { _controller: EtudiantBundle:Etudiant:consulter }
+section_ajouter:
+    path:     /section/ajouter
+    defaults: { _controller: EtudiantBundle:Section:ajouter }
+section_consulter:
+    path:     /section/consulter/{id}
+    defaults: { _controller: EtudiantBundle:Section:consulter }
+promotion_ajouter:
+    path:     /promotion/ajouter
+    defaults: { _controller: EtudiantBundle:Promotion:ajouter }
+promotion_consulter:
+    path:     /promotion/consulter/{id}
+    defaults: { _controller: EtudiantBundle:Promotion:consulter }
+niveau_ajouter:
+    path:     /niveau/ajouter
+    defaults: { _controller: EtudiantBundle:Niveau:ajouter }
+niveau_consulter:
+    path:     /niveau/consulter/{id}
+    defaults: { _controller: EtudiantBundle:Niveau:consulter }
+etudiant_listerParSection:
+    path:     /etudiant/listerParSection/{id}
+    defaults: { _controller: EtudiantBundle:Etudiant:listerParSection }
+stage_ajouter:
+    path:     /stage/ajouter
+    defaults: { _controller: EtudiantBundle:Stage:ajouter }
+stage_consulter:
+    path:     /stage/consulter/{id}
+    defaults: { _controller: EtudiantBundle:Stage:consulter }

@@ -1,0 +1,19 @@
+{# src/webstudent/EtudiantBundle/Resources/views/Etudiant/lister.html.twig #}
+<!DOCTYPE html>
+<html>
+       <head>
+              <title>Lister les étudiants</title>
+       </head>
+       <body>
+              <h1>Liste des étudiants : </h1>
+
+              <table>
+      			         <tr><td>Nom</td><td>Prénom</td><td>Informations</td></tr>
+
+      					 {% for unEtudiant in Etudiant %}
+      					    <tr><td>{{unEtudiant.nom}}</td><td>{{unEtudiant.prenom}}</td><td><a href="{{ path('etudiant_consulter', {'id': unEtudiant.id})}}">Consulter</a></td></tr>
+      					 {% endfor %}
+      			  </table>
+              <a href="{{ path('etudiant_accueil')}}">Retour</a>
+       </body>
+</html>

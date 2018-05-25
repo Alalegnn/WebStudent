@@ -1,0 +1,27 @@
+{# src/webstudent/EtudiantBundle/Resources/views/Etudiant/consulter.html.twig #}
+<!DOCTYPE html>
+<html>
+       <head>
+              <title>Page de consultation d'un étudiant</title>
+       </head>
+       <body>
+              <h1>CONSULTER UN ETUDIANT</h1>
+
+			  <p> Etudiant n° {{pEtudiant.id}}</p>
+              <p> Etudiant nom : {{pEtudiant.nom}}</p>
+			  <p> Etudiant prenom : {{pEtudiant.prenom}}</p>
+			  <p> Etudiant section : {{pEtudiant.section.libelle}}</p>
+			  <p> Etudiant promotion : {{pEtudiant.promotion.libelle}}</p>
+			  <p> Etudiant niveau : {{pEtudiant.niveau.libelle}}</p>
+
+			  <h1>LISTE DES STAGES DE L'ETUDIANT</h1>
+			  <table>
+			         <tr><td>Objet</td><td>Durée (en semaine)</td><td>Information</td></tr>
+
+					 {% for unStage in pEtudiant.stages %}
+					    <tr><td>{{unStage.objet}}</td><td>{{unStage.nbSemaines}}</td><td><a href="{{ path('stage_consulter', {'id': unStage.id})}}">Consulter</a></td></tr>
+					 {% endfor %}
+			  </table>
+        <a href="{{ path('etudiant_lister')}}">Retour</a>
+       </body>
+</html>

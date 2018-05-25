@@ -1,0 +1,24 @@
+{# src/webstudent/EtudiantBundle/Resources/views/Niveau/consulter.html.twig #}
+<!DOCTYPE html>
+<html>
+       <head>
+              <title>Page de consultation du niveau</title>
+       </head>
+       <body>
+              <h1>CONSULTER DU NIVEAU</h1>
+			  
+			  <table>
+			          <tr><td>Identifiant Niveau : </td><td>{{niveau.id}}</td></tr>
+			          <tr><td>Libelle Niveau : </td><td>{{niveau.libelle}}</td></tr>
+			  </table> 
+			  
+			  <h1>LISTE DES ETUDIANTS DE CE NIVEAU</h1>
+			  <table>
+			         <tr><td>Nom</td><td>Prénom</td></tr>
+					 
+					 {% for unEtudiant in niveau.etudiants %}
+					    <tr><td>{{unEtudiant.nom}}</td><td>{{unEtudiant.prenom}}</td></tr>
+					 {% endfor %}
+			  </table>
+       </body>
+</html>

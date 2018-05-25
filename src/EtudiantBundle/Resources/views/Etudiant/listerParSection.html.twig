@@ -1,0 +1,25 @@
+{# src/webstudent/EtudiantBundle/Resources/views/Etudiant/consulter.html.twig #}
+<!DOCTYPE html>
+<html>
+       <head>
+              <title>Page de consultation des étudiants d'une section</title>
+       </head>
+       <body>
+              <h1>SECTION</h1>
+			  
+			  <table>
+			          <tr><td>ID SECTION : </td><td>{{section.id}}</td></tr>
+			          <tr><td>CODE SECTION : </td><td>{{section.code}}</td></tr>
+					  <tr><td>LIBELLE SECTION : </td><td>{{section.libelle}}</td></tr>
+			  </table> 
+			  
+			  <h1>LISTE DES ETUDIANTS DE LA SECTION</h1>
+			  <table>
+			         <tr><td>Nom</td><td>Prénom</td></tr>
+					 
+					 {% for unEtudiant in section.etudiants %}
+					    <tr><td>{{unEtudiant.nom}}</td><td>{{unEtudiant.prenom}}</td></tr>
+					 {% endfor %}
+			  </table>
+       </body>
+</html>

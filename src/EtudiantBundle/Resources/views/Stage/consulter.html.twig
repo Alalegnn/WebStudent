@@ -1,0 +1,27 @@
+{# src/webstudent/EtudiantBundle/Resources/views/Stage/consulter.html.twig #}
+<!DOCTYPE html>
+<html>
+       <head>
+              <title>Page de consultation d'un stage</title>
+       </head>
+       <body>
+              <h1>CONSULTER UN STAGE</h1>
+			  
+			  <p> Stage n° {{pStage.id}}</p>
+              <p> Stage date de début : {{pStage.dateDebut}}</p>
+			  <p> Stage nombre de semaines : {{pStage.nbSemaines}}</p>
+			  <p> Stage objet : {{pStage.objet}}</p>
+			  <p> Stage étudiant : {{pStage.etudiant.nom}}</p>
+			  <p> Stage entreprise : {{pStage.entreprise.nom}}</p>
+			  <p> Stage tuteur : {{pStage.tuteur.nom}}</p>
+			  
+			  <h1>LISTE DES MISSIONS DU STAGE</h1>
+			  <table>
+			         <tr><td>Libelle</td><td>Description</td></tr>
+					 
+					 {% for uneMission in pStage.missions %}
+					    <tr><td>{{uneMission.libelle}}</td><td>{{uneMission.description}}</td></tr>
+					 {% endfor %}
+			  </table>
+       </body>
+</html>
